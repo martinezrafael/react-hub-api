@@ -11,7 +11,10 @@ const App = () => {
 
   allContacts
     .then((res) => {
-      console.log(res);
+      const contacts = res.json();
+    })
+    .then((data) => {
+      console.log(data.body);
     })
     .catch((err) => {
       console.log(err);
